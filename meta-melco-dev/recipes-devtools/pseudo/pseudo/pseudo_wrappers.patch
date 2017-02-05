@@ -1,0 +1,14 @@
+--- pseudo-1.7.5/pseudo_wrappers.orig.c	2016-02-09 19:45:52.000000000 +0000
++++ pseudo-1.7.5/pseudo_wrappers.c	2017-02-05 11:12:39.620814382 +0000
+@@ -146,9 +146,9 @@
+ 			return;
+ 		}
+ #else
+-		if (e != NULL) {
++		/* if (e != NULL) {
+ 			pseudo_diag("No real function for %s: %s\n", func->name, e);
+-		}
++		} */
+ #endif
+ 	}
+ }
