@@ -1,0 +1,28 @@
+From a91e616fd972f26b80bc8210431e3df111cbc9db Mon Sep 17 00:00:00 2001
+From: Johans <johan.strand@melcogot.com>
+Date: Wed, 1 Feb 2017 14:54:45 +0000
+Subject: [PATCH] removed auto start hmi
+
+---
+ gdp-new-hmi.service | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+diff --git a/gdp-new-hmi.service b/gdp-new-hmi.service
+index 2b030b2..94850c8 100644
+--- a/gdp-new-hmi.service
++++ b/gdp-new-hmi.service
+@@ -5,9 +5,9 @@ After=weston.service
+ 
+ [Service]
+ Environment=LD_PRELOAD=/usr/lib/libEGL.so
+-ExecStart=/opt/genivi-11-hmi/bin/genivi-11-hmi -platform wayland
+-Restart=always
+-RestartSec=5
++#ExecStart=/opt/genivi-11-hmi/bin/genivi-11-hmi -platform wayland
++#Restart=always
++#RestartSec=5
+ 
+ [Install]
+ WantedBy=default.target
+-- 
+1.9.1
+

@@ -1,0 +1,25 @@
+From 29c6516c83d0b3c9c4a224f8af8a131c09d255c5 Mon Sep 17 00:00:00 2001
+From: Johans <johan.strand@melcogot.com>
+Date: Mon, 6 Feb 2017 07:20:40 +0000
+Subject: [PATCH] removed startup of weston.service
+
+---
+ weston.service | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/weston.service b/weston.service
+index 3d25c37..f8ac149 100644
+--- a/weston.service
++++ b/weston.service
+@@ -3,7 +3,7 @@ Description=Weston reference Wayland compositor
+ After=dbus.service rc.pvr.service
+ 
+ [Service]
+-ExecStart=/usr/bin/weston-launch -u root -- --idle-time=4294967
++#ExecStart=/usr/bin/weston-launch -u root -- --idle-time=4294967
+ ExecStop=/usr/bin/killall -s KILL weston
+ Type=simple
+ 
+-- 
+1.9.1
+
