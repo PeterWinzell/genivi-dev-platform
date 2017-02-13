@@ -29,5 +29,5 @@ FILES_${PN} += "${bindir}"
 # install the EXECUTABLE to bindir (usr/bin)
 do_install() {
     install -d ${D}${bindir}
-    install -m 0755 ${B}/${app_binary} ${D}${bindir}
+    install -m 0755 ${B}/src/${app_binary} ${D}${bindir}
 }
