@@ -17,7 +17,7 @@ SRCREV="${AUTOREV}"
 SRC_URI = "git://github.com/PeterWinzell/GDP-melco.git"
 
 # where to to look for the source files
-S = "${WORKDIR}/git/${project_name}"
+S = "${WORKDIR}/git/${project_name}/src"
 
 # required qt5 stuff
 #inherit qmake5
