@@ -10,10 +10,10 @@ app_binary = "W3CServer"
 DEPENDS = "qtbase qtwebsockets"
 
 # Specify the hash key for a specific 'check in' if you don't want to check out the latest from HEAD
-# example SRCREV = "295da5482fd76b2d989ccb77fb1ca05ba7ad4225"
+# example SRCREV = "LP-84"
 
-SRCREV="${AUTOREV}"
-#SRC_URI = "git://github.com/thomas68/melco-qt-proj.git"
+SRCREV="${W3C_BRANCH}"
+
 SRC_URI = "git://github.com/PeterWinzell/GDP-melco.git"
 
 # where to to look for the source files
