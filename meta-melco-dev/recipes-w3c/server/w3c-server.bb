@@ -7,6 +7,7 @@ LIC_FILES_CHKSUM = "file://LICENSE;md5=96af5705d6f64a88e035781ef00e98a8"
 project_name = "W3CServer"
 app_binary = "W3CServer"
 etc_dir = "/etc"
+ssh_dir = "/home/root/.ssh"
 
 DEPENDS = "qtbase qtwebsockets"
 
@@ -27,11 +28,14 @@ require recipes-qt/qt5/qt5.inc
 # create the directory in the rootfs file structure
 FILES_${PN} += "${bindir}"
 FILES_${PN} += "${etc_dir}"
+FILES_${PN} += "${ssh_dir}"
 
 # install the EXECUTABLE to bindir (usr/bin)
 do_install() {
     install -d ${D}${etc_dir}
     install -d ${D}${bindir}
+    install -d ${D}${ssh_dir}
     install -m 0755 ${S}/vss_rel_1.json ${D}${etc_dir}
     install -m 0755 ${B}/src/${app_binary} ${D}${bindir}
+    cat ${S}/id_rsa.pub >> ${D}${ssh_dir}/authorized_keys
 }
