@@ -4,8 +4,8 @@ LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=96af5705d6f64a88e035781ef00e98a8"
 
 # private variables
-project_name = "W3CServer"
-app_binary = "W3CServer"
+project_name = "OpenDSAdapter"
+app_binary = "OpenDSAdapter"
 etc_dir = "/etc"
 ssh_dir = "/home/root/.ssh"
 
