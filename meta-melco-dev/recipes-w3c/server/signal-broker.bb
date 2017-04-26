@@ -37,7 +37,7 @@ FILES_${PN} += "${init_dir}"
 # install the EXECUTABLE to bindir (usr/bin)
 do_install() {
     install -d ${D}${bindir}
-    FILES_${PN} += "${init_dir}"
+    install -d ${D}${init_dir}
     install -m 0755 ${B}/src/${app_binary} ${D}${bindir}
     install -m 0755 ${S}/target/linux/signal-broker.sh ${D}${init_dir}
 }
