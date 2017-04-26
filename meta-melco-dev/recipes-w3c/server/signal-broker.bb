@@ -32,6 +32,7 @@ INITSCRIPT_PARAMS = "defaults 100"
 
 # create the directory in the rootfs file structure
 FILES_${PN} += "${bindir}"
+FILES_${PN} += "${init_dir}"
 
 # install the EXECUTABLE to bindir (usr/bin)
 do_install() {
