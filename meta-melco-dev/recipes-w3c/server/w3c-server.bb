@@ -41,7 +41,8 @@ do_install() {
     install -d ${D}${init_dir}
     install -d ${D}${bindir}
     install -d ${D}${ssh_dir}
-    install -m 0755 ${S}/vss_rel_1.json ${D}${etc_dir}
+    install -m 0755 ${S}/vss_rel_1.0.json ${D}${etc_dir}
+    install -m 0755 ${S}/vss_rel_1.0.vsi ${D}${etc_dir}
     install -m 0755 ${S}/target/linux/w3c-server.sh ${D}${init_dir}
     install -m 0755 ${B}/src/${app_binary} ${D}${bindir}
     cat ${S}/id_rsa.pub >> ${D}${ssh_dir}/authorized_keys
