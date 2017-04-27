@@ -28,7 +28,7 @@ require recipes-qt/qt5/qt5.inc
 inherit update-rc.d
 
 INITSCRIPT_NAME = "w3c-server.sh"
-INITSCRIPT_PARAMS = "defaults 100"
+INITSCRIPT_PARAMS = "defaults 91"
 
 # create the directory in the rootfs file structure
 FILES_${PN} += "${bindir}"
