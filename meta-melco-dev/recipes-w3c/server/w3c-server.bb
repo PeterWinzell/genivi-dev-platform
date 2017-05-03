@@ -13,11 +13,9 @@ init_dir = "/etc/init.d"
 DEPENDS = "qtbase qtwebsockets"
 
 # Specify the hash key for a specific 'check in' if you don't want to check out the latest from HEAD
-# example SRCREV = "LP-84"
 
-SRCREV="${W3C_BRANCH}"
-
-SRC_URI = "git://github.com/PeterWinzell/GDP-melco.git"
+SRCREV="${AUTOREV}"
+SRC_URI = "git://github.com/PeterWinzell/GDP-melco.git;branch=${W3C_BRANCH}"
 
 # where to to look for the source files
 S = "${WORKDIR}/git/${project_name}"
@@ -28,7 +26,7 @@ require recipes-qt/qt5/qt5.inc
 inherit update-rc.d
 
 INITSCRIPT_NAME = "w3c-server.sh"
-INITSCRIPT_PARAMS = "defaults 91"
+INITSCRIPT_PARAMS = "defaults 95"
 
 # create the directory in the rootfs file structure
 FILES_${PN} += "${bindir}"
